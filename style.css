@@ -6,11 +6,20 @@
     user-select: none;
     color: white;
     -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
 }
 
 main {
     background: #0A0519;
-    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,8 +62,8 @@ main {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(3, min(25vw, 90px));
-    grid-template-rows: repeat(3, min(25vw, 90px));
+    grid-template-columns: repeat(3, min(30vw, 120px));
+    grid-template-rows: repeat(3, min(30vw, 120px));
     gap: 12px;
 }
 
@@ -64,7 +73,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: min(15vw, 60px);
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s background;
