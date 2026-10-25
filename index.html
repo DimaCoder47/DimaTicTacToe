@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TicTacToe Game</title>
+    
+    <!-- Theme-Farbe & PWA-Status für Smartphones -->
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="App-Name">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons für Android & Desktop-Browser -->
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
+    
+    <!-- Icon für iOS / Apple -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    
+    <title>TicTacToe Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:,">
 </head>
@@ -45,5 +59,16 @@
         </button>
     </main>
     <script src="main.js"></script>
+
+    <!-- Service Worker Registrierung -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./serviceWorker.js')
+            .then(() => console.log('Service Worker registriert!'))
+            .catch(err => console.log('Service Worker Fehler:', err));
+        });
+      }
+    </script>
 </body>
 </html>
