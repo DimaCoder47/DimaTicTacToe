@@ -1,6 +1,6 @@
 {
   "name": "TicTacToe",
-  "short_name": "TicTacToePROJEKT",
+  "short_name": "TicTacToe",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#1e1e1e",
