@@ -3,8 +3,8 @@
   "short_name": "TicTacToe",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#1e1e1e",
-  "theme_color": "#1e1e1e",
+  "background_color": "#0A0519",
+  "theme_color": "#0A0519",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
